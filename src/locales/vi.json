@@ -1,0 +1,10 @@
+{
+  "HomePage": {
+    "title": "Trang chủ",
+    "welcome": "Chào mừng đến Trang Chủ"
+  },
+  "AboutPage": {
+    "title": "Giới thiệu",
+    "welcome": "Chào mừng đến Trang Giới Thiệu"
+  }
+}
