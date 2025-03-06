@@ -10,7 +10,36 @@ export const pathnames = {
     en: '/about',
     vi: '/gioi-thieu',
   },
+  '/sign-in': {
+    en: '/sign-in',
+    vi: '/dang-nhap',
+  },
+  '/not-found': {
+    en: '/not-found',
+    vi: '/khong-tim-thay',
+  },
+  '/admin': {
+    en: '/admin',
+    vi: '/quan-ly',
+  },
+  '/admin/products': {
+    en: '/admin/products',
+    vi: '/quan-ly/san-pham',
+  },
+  '/admin/products/[slug]': {
+    en: '/admin/products/[slug]',
+    vi: '/quan-ly/san-pham/[slug]',
+  },
 } satisfies Pathnames<typeof locales>;
+
+const publicPathname: string[] = ["/", "/sign-in", "/contact", "/about"]
+
+export const rolePermissions = {
+  guest: [...publicPathname],
+  user: [...publicPathname, "/profile"],
+  manager: [...publicPathname, "/admin"],
+  admin: ["*"],
+};
 
 // Use the default: `always`
 export const localePrefix = undefined;
@@ -23,6 +52,6 @@ type AppPathnamesWithoutSlug = ExcludeType<AppPathnames, AppPathnamesWithSlug>;
 export type Href =
   | AppPathnamesWithoutSlug
   | ({
-      pathname: AppPathnames;
-      params?: unknown;
-    } & Omit<UrlObject, 'pathname'>);
+    pathname: AppPathnames;
+    params?: unknown;
+  } & Omit<UrlObject, 'pathname'>);

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ThemeToggleMode from "../ToggleThemeMode";
 
 export default function Nav() {
@@ -7,37 +8,37 @@ export default function Nav() {
         <div className="relative flex items-center justify-between lg:justify-center lg:space-x-16">
           <ul className="flex items-center hidden space-x-8 lg:flex">
             <li>
-              <a
+              <Link
                 href="/"
                 aria-label="Our product"
                 title="Our product"
                 className="font-medium tracking-wide transition-colors duration-200"
               >
                 Product
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/"
                 aria-label="Our product"
                 title="Our product"
                 className="font-medium tracking-wide transition-colors duration-200"
               >
                 Features
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/"
                 aria-label="Product pricing"
                 title="Product pricing"
                 className="font-medium tracking-wide transition-colors duration-200"
               >
                 Pricing
-              </a>
+              </Link>
             </li>
           </ul>
-          <a
+          <Link
             href="/"
             aria-label="Company"
             title="Company"
@@ -61,37 +62,37 @@ export default function Nav() {
             <span className="ml-2 text-xl font-bold tracking-wide uppercase">
               Company
             </span>
-          </a>
+          </Link>
           <ul className="flex items-center hidden space-x-8 lg:flex">
             <li>
-              <a
-                href="/"
+              <Link
+                href="/about"
                 aria-label="About us"
                 title="About us"
                 className="font-medium tracking-wide transition-colors duration-200"
               >
                 About us
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/"
+              <Link
+                href="/sign-in"
                 aria-label="Sign in"
                 title="Sign in"
                 className="font-medium tracking-wide transition-colors duration-200"
               >
                 Sign in
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/"
                 aria-label="Sign up"
                 title="Sign up"
                 className="font-medium tracking-wide transition-colors duration-200"
               >
                 Sign up
-              </a>
+              </Link>
             </li>
           </ul>
           {/* Mobile menu */}
@@ -121,7 +122,7 @@ export default function Nav() {
   <div class="p-5 bg-white border rounded shadow-sm">
     <div class="flex items-center justify-between mb-4">
       <div>
-        <a href="/" aria-label="Company" title="Company" class="inline-flex items-center">
+        <Link href="/" aria-label="Company" title="Company" class="inline-flex items-center">
           <svg class="w-8 text-deep-purple-accent-400" viewBox="0 0 24 24" stroke-linejoin="round" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke="currentColor" fill="none">
             <rect x="3" y="1" width="7" height="12"></rect>
             <rect x="3" y="17" width="7" height="6"></rect>
@@ -129,7 +130,7 @@ export default function Nav() {
             <rect x="14" y="11" width="7" height="12"></rect>
           </svg>
           <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">Company</span>
-        </a>
+        </Link>
       </div>
       <div>
         <button aria-label="Close Menu" title="Close Menu" class="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
@@ -144,20 +145,20 @@ export default function Nav() {
     </div>
     <nav>
       <ul class="space-y-4">
-        <li><a href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide transition-colors duration-200">Product</a></li>
-        <li><a href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide transition-colors duration-200">Features</a></li>
-        <li><a href="/" aria-label="Product pricing" title="Product pricing" class="font-medium tracking-wide transition-colors duration-200">Pricing</a></li>
-        <li><a href="/" aria-label="About us" title="About us" class="font-medium tracking-wide transition-colors duration-200">About us</a></li>
-        <li><a href="/" aria-label="Sign in" title="Sign in" class="font-medium tracking-wide transition-colors duration-200">Sign in</a></li>
+        <li><Link href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide transition-colors duration-200">Product</Link></li>
+        <li><Link href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide transition-colors duration-200">Features</Link></li>
+        <li><Link href="/" aria-label="Product pricing" title="Product pricing" class="font-medium tracking-wide transition-colors duration-200">Pricing</Link></li>
+        <li><Link href="/" aria-label="About us" title="About us" class="font-medium tracking-wide transition-colors duration-200">About us</Link></li>
+        <li><Link href="/" aria-label="Sign in" title="Sign in" class="font-medium tracking-wide transition-colors duration-200">Sign in</Link></li>
         <li>
-          <a
+          <Link
             href="/"
             class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
             aria-label="Sign up"
             title="Sign up"
           >
             Sign up
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>

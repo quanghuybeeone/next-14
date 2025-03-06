@@ -54,7 +54,6 @@ export default function ThemeToggleMode() {
           </svg>
         </span>
       </button> */}
-
     </>
   );
 }

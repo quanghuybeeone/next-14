@@ -1,7 +1,8 @@
 import { NextIntlClientProvider, useMessages } from 'next-intl';
 
-import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
+import Nav from '@/components/Nav';
+import AuthProvider from '@/providers/authProvider';
 
 export default function LocaleLayout({
   children,
@@ -15,7 +16,11 @@ export default function LocaleLayout({
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
       <Nav />
-      {children}
+      <div className="min-h-screen bg-background text-foreground">
+        <AuthProvider>
+          {children}
+        </AuthProvider>
+      </div>
       <Footer />
     </NextIntlClientProvider>
   );
