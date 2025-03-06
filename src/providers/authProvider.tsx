@@ -23,7 +23,6 @@ export default function AuthProvider({ children }: { children: React.ReactNode }
         const allowedPaths = new Set(rolePermissions[userRole]);
         const path = pathname.replace(`/${locale}`, "");
         const pathNameOrigin = findPathnameOrigin(locale as string, path);
-        console.log('pathNameOrigin', pathNameOrigin);
         if(pathNameOrigin){
             const hasPermission = allowedPaths.has(pathNameOrigin) || allowedPaths.has("*") || (allowedPaths.has("/admin") && pathNameOrigin.startsWith("/admin"));
             setIsAuthorized(hasPermission);

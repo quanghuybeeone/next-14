@@ -1,9 +1,6 @@
 import { pathnames } from "@/config";
 
 export const findPathnameOrigin = (locale: string, path: string) => {
-    console.log(locale);
-    console.log(path);
-
     if (path === "") return "/";
 
     for (const [key, value] of Object.entries(pathnames)) {
