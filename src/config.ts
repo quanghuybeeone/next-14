@@ -30,9 +30,13 @@ export const pathnames = {
     en: '/admin/products/[slug]',
     vi: '/quan-ly/san-pham/[slug]',
   },
+  '/test': {
+    en: '/test',
+    vi: '/test',
+  },
 } satisfies Pathnames<typeof locales>;
 
-const publicPathname: string[] = ["/", "/sign-in", "/contact", "/about"]
+const publicPathname: string[] = ["/", "/sign-in", "/contact", "/about", "/test"]
 
 export const rolePermissions = {
   guest: [...publicPathname],
